@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--white);
+}
+
+:root {
+  --dark-blue: #181F32;
+  --gray: #647299;
+  --red: #D13F30;
+  --dark-gray: #3B4664;
+  --violet: #252D44;
+  --white: #EAE3DB;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--dark-gray);
+}
+
+.calc-container {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.display {
+  height: 20%;
+  width: 100%;
+}
+
+.display-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-family: 'Segoe UI';
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 5%;
+  overflow-x: scroll;
+}
+
+.button-container {
+  height: 70%;
+  width: 100%;
+  padding: 6% 4%;
+  background-color: var(--violet);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button, .btn-delete, .btn-reset, .btn-equal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+
+.button {
+  background-color: var(--white);
+  width: 22%;
+  height: 100%;
+  color: var(--dark-gray);
+}
+
+.btn-delete {
+  background-color: var(--gray);
+  width: 22%;
+  height: 100%;
+  color: var(--white);
+  letter-spacing: 1.5px;
+}
+
+.btn-reset, .btn-equal {
+  width: 47%;
+  height: 100%;
+  color: var(--white);
+}
+
+.btn-reset {
+  background-color: var(--gray);
+  letter-spacing: 1.5px;
+}
+
+.btn-equal {
+  background-color: var(--red);
+}
