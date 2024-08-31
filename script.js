@@ -6,7 +6,7 @@ const buttons = document.querySelectorAll(".button");
 
 const buttonsArray = Array.from(buttons);
 
-let lastKeyIsOperator = false;
+let lastKeyOperatorFlag = false;
 let decimalAdded = false;
 
 const keyClickHandler = (event) => {
@@ -17,18 +17,17 @@ const keyClickHandler = (event) => {
   }
 
   if ("+-x/".includes(value)) {
-    if (lastKeyIsOperator) {
+    if (lastKeyOperatorFlag) {
       let initialValue = displayInput.value;
       let updatedValue = initialValue.substring(0, initialValue.length - 1) + value;
       displayInput.value = updatedValue;
       return;
     }
 
-    lastKeyIsOperator = true;
+    lastKeyOperatorFlag = true;
     decimalAdded = false;
   } else {
-    lastKeyIsOperator = false;
-
+    lastKeyOperatorFlag = false;
     if (value === ".") {
       decimalAdded = true;
     }
