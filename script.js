@@ -49,8 +49,8 @@ const deleteHandler = () => {
 };
 
 const expressionHandler = (expression) => {
-  const formattedExpression = expression.replace(/x/g, "*");
-  const result = eval(formattedExpression);
+  const finalExpression = expression.replace(/x/g, "*");
+  const result = eval(finalExpression);
 
   if (Number.isInteger(result)) {
     return result.toString();
